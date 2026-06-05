@@ -1,0 +1,3570 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TALHA® — Creative Design Studio | Branding & Visual Identity</title>
+    <meta
+      name="description"
+      content="Muhammad Talha Saleem — Graphic designer and creative director specialising in branding, packaging, poster design, and visual identities for modern brands."
+    />
+    <meta name="author" content="Muhammad Talha Saleem" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="TALHA® — Creative Design Studio" />
+    <meta
+      property="og:description"
+      content="Crafting premium visual identities for modern brands. Branding, packaging, poster design and more."
+    />
+    <meta property="og:image" content="Home section.png" />
+    <meta property="og:url" content="https://talhadesigns.github.io" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="TALHA® — Creative Design Studio" />
+    <meta
+      name="twitter:description"
+      content="Crafting premium visual identities for modern brands."
+    />
+    <meta name="twitter:image" content="Home section.png" />
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Tenor+Sans&family=Outfit:wght@300;400;500;600;700;800&family=DM+Sans:wght@300;400;500&family=Dancing+Script:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      :root {
+        --gold: #c9a84c;
+        --gold-light: #d4b56a;
+        --black: #000;
+        --white: #fff;
+        --gray: #999;
+        --border: rgba(201, 168, 76, 0.28);
+      }
+      html,
+      body {
+        background: var(--black);
+        color: var(--white);
+        font-family: "Outfit", sans-serif;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+      }
+      ::-webkit-scrollbar {
+        width: 4px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #000;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #333;
+        border-radius: 2px;
+      }
+
+      /* ============================================
+   PREMIUM SCROLLING NAVBAR
+   Transparent at load → solid + blur on scroll
+============================================ */
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 200;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 22px 52px;
+        background: transparent;
+        border-bottom: 1px solid transparent;
+        transition:
+          background 0.45s ease,
+          padding 0.35s ease,
+          border-color 0.45s ease,
+          backdrop-filter 0.45s ease;
+      }
+      nav.nav-scrolled {
+        padding: 14px 52px;
+        background: rgba(0, 0, 0, 0.88);
+        backdrop-filter: blur(22px);
+        -webkit-backdrop-filter: blur(22px);
+        border-bottom-color: rgba(255, 255, 255, 0.06);
+      }
+      .nav-logo {
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 700;
+        font-size: 24px;
+        letter-spacing: 0.08em;
+        color: var(--white);
+        text-decoration: none;
+      }
+      .nav-logo sup {
+        font-size: 10px;
+        vertical-align: super;
+        line-height: 0;
+      }
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 44px;
+        list-style: none;
+      }
+      .nav-links a {
+        font-size: 10px;
+        font-weight: 400;
+        font-family: "Tenor Sans", sans-serif;
+        letter-spacing: 0.18em;
+        color: var(--white);
+        text-decoration: none;
+        position: relative;
+        padding-bottom: 4px;
+        transition: color 0.25s;
+      }
+      .nav-links a::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 1.5px;
+        background: var(--gold);
+        transition: width 0.3s ease;
+      }
+      .nav-links a:hover {
+        color: var(--gold);
+      }
+      .nav-links a:hover::after,
+      .nav-links a.active::after {
+        width: 100%;
+      }
+      .nav-hire {
+        position: relative;
+        width: 62px;
+        height: 62px;
+        cursor: pointer;
+        flex-shrink: 0;
+        text-decoration: none;
+      }
+      .nav-hire svg.hire-ring {
+        position: absolute;
+        inset: 0;
+        width: 62px;
+        height: 62px;
+        animation: ringSpinNav 10s linear infinite;
+      }
+      @keyframes ringSpinNav {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      .nav-hire-dot {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        background: var(--gold);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s;
+      }
+      .nav-hire:hover .nav-hire-dot {
+        background: var(--gold-light);
+        transform: translate(-50%, -50%) scale(1.1);
+      }
+      .nav-hire-dot svg {
+        width: 13px;
+        height: 13px;
+        stroke: #000;
+        fill: none;
+        stroke-width: 2.2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      /* HOME */
+      #home {
+        position: relative;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+      .hero-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100vh;
+        z-index: 0;
+        overflow: hidden;
+      }
+      .hero-bg img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: right center;
+        display: block;
+      }
+      .hero-bg::after {
+        content: none;
+      }
+      .hero-content-area {
+        position: relative;
+        z-index: 1;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        padding: 0 52px;
+        padding-top: 66px;
+      }
+      .hero-left {
+        display: flex;
+        flex-direction: column;
+        max-width: 540px;
+        animation: fadeUp 0.9s ease both;
+      }
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(32px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .hero-heading {
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 600;
+        font-size: clamp(36px, 4.6vw, 66px);
+        line-height: 1.06;
+        letter-spacing: 0.01em;
+        color: var(--white);
+        margin-bottom: 16px;
+      }
+      .hero-sub {
+        font-family: "Outfit", sans-serif;
+        font-size: 14px;
+        font-weight: 300;
+        color: rgba(255, 255, 255, 0.72);
+        line-height: 1.68;
+        max-width: 340px;
+        margin-bottom: 30px;
+      }
+      .hero-buttons {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+      .btn {
+        font-family: "Tenor Sans", sans-serif;
+        font-size: 10px;
+        font-weight: 400;
+        letter-spacing: 0.2em;
+        padding: 14px 28px;
+        cursor: pointer;
+        transition: all 0.28s ease;
+        text-decoration: none;
+        display: inline-block;
+        text-transform: uppercase;
+      }
+      .btn-outline {
+        border: 1.5px solid var(--white);
+        color: var(--white);
+        background: transparent;
+      }
+      .btn-outline:hover {
+        background: var(--white);
+        color: var(--black);
+      }
+      .btn-gold {
+        background: var(--gold);
+        color: var(--black);
+        border: 1.5px solid var(--gold);
+      }
+      .btn-gold:hover {
+        background: var(--gold-light);
+        border-color: var(--gold-light);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(201, 168, 76, 0.3);
+      }
+
+      /* TICKER */
+      .ticker-strip {
+        position: relative;
+        z-index: 1;
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+        overflow: hidden;
+        padding: 16px 0;
+        background: var(--black);
+      }
+      .ticker-track {
+        display: flex;
+        width: max-content;
+        animation: ticker 22s linear infinite;
+      }
+      .ticker-track:hover {
+        animation-play-state: paused;
+      }
+      @keyframes ticker {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+      .ticker-item {
+        font-size: 10px;
+        font-weight: 400;
+        font-family: "Tenor Sans", sans-serif;
+        letter-spacing: 0.22em;
+        white-space: nowrap;
+        padding: 0 18px;
+        color: var(--white);
+      }
+      .ticker-dot {
+        color: var(--gold);
+        font-size: 7px;
+        padding: 0 3px;
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      /* BOTTOM SPLIT */
+      .bottom-split {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 52px 52px 58px;
+        gap: 56px;
+        align-items: end;
+        background: var(--black);
+        position: relative;
+        z-index: 1;
+      }
+      .bottom-quote {
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 600;
+        font-size: clamp(22px, 2.8vw, 38px);
+        line-height: 1.22;
+        color: var(--white);
+      }
+      .bottom-right {
+        display: flex;
+        flex-direction: column;
+        gap: 26px;
+        align-items: flex-start;
+      }
+      .bottom-desc {
+        font-family: "Outfit", sans-serif;
+        font-size: 13.5px;
+        font-weight: 300;
+        color: var(--gray);
+        line-height: 1.8;
+        max-width: 340px;
+      }
+      .learn-more {
+        font-size: 10px;
+        font-weight: 400;
+        font-family: "Tenor Sans", sans-serif;
+        letter-spacing: 0.16em;
+        color: var(--gold);
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        transition: gap 0.25s;
+        text-transform: uppercase;
+      }
+      .learn-more:hover {
+        gap: 14px;
+      }
+
+      /* WORK SECTION */
+      #work {
+        background: var(--black);
+        padding-top: 80px;
+      }
+      .work-hero {
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+      }
+      .work-bg {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        pointer-events: none;
+      }
+      .work-bg img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+      }
+      .work-hero > *:not(.work-bg) {
+        position: relative;
+        z-index: 1;
+      }
+      .work-filters {
+        position: relative;
+        z-index: 1;
+      }
+      .work-hero {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        padding: 56px 52px 46px;
+        gap: 36px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+      }
+      .work-title {
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 600;
+        font-size: clamp(52px, 7.5vw, 96px);
+        line-height: 0.94;
+        letter-spacing: 0em;
+        color: var(--white);
+        margin-bottom: 22px;
+      }
+      .work-subtitle {
+        font-family: "Outfit", sans-serif;
+        font-size: 14px;
+        font-weight: 300;
+        color: var(--gray);
+        line-height: 1.7;
+        max-width: 250px;
+        margin-bottom: 38px;
+      }
+      .btn-gold-outline {
+        font-family: "Tenor Sans", sans-serif;
+        font-size: 10px;
+        font-weight: 400;
+        letter-spacing: 0.2em;
+        padding: 14px 28px;
+        border: 1.5px solid var(--gold);
+        color: var(--gold);
+        background: transparent;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+        transition: all 0.28s;
+        text-transform: uppercase;
+      }
+      .btn-gold-outline:hover {
+        background: var(--gold);
+        color: var(--black);
+      }
+      .work-hero-right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .featured-card {
+        background: #0d0d0d;
+        border-radius: 22px;
+        overflow: hidden;
+        width: 250px;
+        padding: 30px 22px 26px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+        border: 1px solid rgba(255, 255, 255, 0.07);
+      }
+      .fc-brand {
+        font-weight: 700;
+        font-size: 19px;
+        letter-spacing: 0.2em;
+        color: var(--white);
+      }
+      .fc-estd {
+        font-size: 9px;
+        letter-spacing: 0.25em;
+        color: var(--gray);
+        border-top: 1px solid rgba(255, 255, 255, 0.12);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+        padding: 3px 0;
+        width: 100%;
+        text-align: center;
+      }
+      .fc-divider {
+        font-size: 9px;
+        color: var(--gray);
+        letter-spacing: 0.15em;
+        opacity: 0.4;
+      }
+      .fc-roast {
+        text-align: center;
+      }
+      .fc-roast-title {
+        font-weight: 700;
+        font-size: 17px;
+        letter-spacing: 0.14em;
+        color: var(--white);
+        line-height: 1.1;
+      }
+      .fc-roast-sub {
+        font-size: 8px;
+        letter-spacing: 0.2em;
+        color: var(--gray);
+        margin-top: 4px;
+      }
+
+      /* FILTER TABS */
+      .work-filters {
+        display: flex;
+        align-items: center;
+        padding: 0 52px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+        overflow-x: auto;
+        gap: 0;
+      }
+      .filter-tab {
+        font-family: "Tenor Sans", sans-serif;
+        font-size: 10px;
+        font-weight: 400;
+        letter-spacing: 0.18em;
+        color: var(--gray);
+        padding: 20px 26px;
+        cursor: pointer;
+        position: relative;
+        white-space: nowrap;
+        background: none;
+        border: none;
+        transition: color 0.25s;
+        text-transform: uppercase;
+      }
+      .filter-tab::after {
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: var(--gold);
+        transition: width 0.3s ease;
+      }
+      .filter-tab.active {
+        color: var(--white);
+      }
+      .filter-tab.active::after {
+        width: 100%;
+      }
+      .filter-tab:hover {
+        color: var(--white);
+      }
+
+      /* ============================================
+   PROJECT CARDS — CONSISTENT FIXED-SIZE
+   Cards NEVER resize based on image dimensions.
+   Images use object-fit:cover + transform for
+   admin-controlled zoom & position.
+============================================ */
+      .projects-outer {
+        padding: 36px 52px 0;
+      }
+      .projects-grid-wrap {
+        display: grid;
+        grid-template-columns: repeat(var(--proj-cols, 3), 1fr);
+        gap: var(--proj-gap, 20px);
+      }
+      .project-card {
+        position: relative;
+        cursor: pointer;
+        border-radius: var(--proj-radius, 14px);
+        overflow: hidden;
+        background: #111;
+        border: 1px solid rgba(255, 255, 255, 0.07);
+        transition:
+          border-color 0.3s,
+          transform 0.3s,
+          box-shadow 0.3s;
+      }
+      .project-card:hover {
+        border-color: rgba(201, 168, 76, 0.5);
+        transform: translateY(-4px);
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+      }
+      .project-card.active-card {
+        border-color: var(--gold);
+        transform: none;
+      }
+      .project-card.card-strip {
+        grid-column: 1 / -1;
+      }
+
+      /* Fixed-size thumbnail — ALWAYS the same dimensions */
+      .pc-thumb {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        background: #0d0d0d;
+        display: block;
+        aspect-ratio: var(--proj-ratio, 1 / 1);
+        /* Strip cards override below */
+      }
+      .project-card.card-strip .pc-thumb {
+        aspect-ratio: unset;
+        height: var(--strip-height, 280px);
+      }
+      /* Image fills the fixed container, admin-controlled zoom/position via transform */
+      .pc-thumb-img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transform-origin: center center;
+        transition: transform 0.35s ease;
+      }
+      .pc-thumb-placeholder {
+        position: absolute;
+        inset: 0;
+        background: #0d0d0d;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 9px;
+      }
+      .pc-thumb-placeholder svg {
+        width: 30px;
+        height: 30px;
+        stroke: rgba(201, 168, 76, 0.22);
+        fill: none;
+        stroke-width: 1.5;
+      }
+      .pc-thumb-placeholder span {
+        font-size: 9px;
+        letter-spacing: 0.18em;
+        color: rgba(255, 255, 255, 0.1);
+      }
+      .pc-img-error {
+        position: absolute;
+        inset: 0;
+        background: #0d0d0d;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+      }
+      .pc-img-error svg {
+        width: 26px;
+        height: 26px;
+        stroke: rgba(201, 168, 76, 0.2);
+        fill: none;
+        stroke-width: 1.5;
+      }
+      .pc-img-error span {
+        font-size: 9px;
+        letter-spacing: 0.14em;
+        color: rgba(255, 255, 255, 0.12);
+      }
+      .pc-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0.82) 0%,
+          transparent 55%
+        );
+        opacity: 0;
+        transition: opacity 0.35s;
+        display: flex;
+        align-items: flex-end;
+        padding: 18px;
+        z-index: 2;
+      }
+      .project-card:hover .pc-overlay,
+      .project-card.active-card .pc-overlay {
+        opacity: 1;
+      }
+      .pc-overlay-icon {
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        background: var(--gold);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: auto;
+      }
+      .pc-overlay-icon svg {
+        width: 13px;
+        height: 13px;
+        stroke: #000;
+        fill: none;
+        stroke-width: 2.5;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        transition: transform 0.3s;
+      }
+      .project-card.active-card .pc-overlay-icon svg {
+        transform: rotate(45deg);
+      }
+      .pc-info {
+        padding: 13px 15px 15px;
+      }
+      .pc-name {
+        font-family: "Tenor Sans", sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        color: var(--white);
+        margin-bottom: 2px;
+        letter-spacing: 0.03em;
+      }
+      .pc-type {
+        font-family: "Outfit", sans-serif;
+        font-size: 11px;
+        font-weight: 300;
+        color: var(--gray);
+      }
+
+      /* EXPAND PANEL */
+      .project-expand {
+        grid-column: 1 / -1;
+        background: #0a0a0a;
+        border: 1px solid rgba(201, 168, 76, 0.22);
+        border-radius: 12px;
+        overflow: hidden;
+        animation: expandIn 0.38s cubic-bezier(0.16, 1, 0.3, 1) both;
+      }
+      @keyframes expandIn {
+        from {
+          opacity: 0;
+          transform: scaleY(0.88);
+          transform-origin: top;
+        }
+        to {
+          opacity: 1;
+          transform: scaleY(1);
+        }
+      }
+      .expand-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 26px 34px 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      }
+      .expand-category {
+        font-size: 9px;
+        font-weight: 700;
+        letter-spacing: 0.22em;
+        color: var(--gold);
+        margin-bottom: 5px;
+        text-transform: uppercase;
+      }
+      .expand-title {
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 600;
+        font-size: 24px;
+        color: var(--white);
+      }
+      .expand-subtitle {
+        font-family: "Outfit", sans-serif;
+        font-size: 12px;
+        color: var(--gray);
+        margin-top: 2px;
+      }
+      .expand-close {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        color: var(--white);
+        font-size: 19px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s;
+        flex-shrink: 0;
+      }
+      .expand-close:hover {
+        background: rgba(201, 168, 76, 0.2);
+        color: var(--gold);
+      }
+      .expand-gallery {
+        padding: 26px 34px 34px;
+      }
+      .expand-gallery-empty {
+        text-align: center;
+        padding: 48px 0;
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.18);
+        letter-spacing: 0.1em;
+      }
+
+      /* ============================================
+   GALLERY — Masonry / natural proportions
+   Images are never cropped. Each shows its full
+   artwork with natural aspect ratio preserved.
+============================================ */
+      .expand-img-grid {
+        columns: 3;
+        column-gap: 12px;
+      }
+      .expand-img-item {
+        break-inside: avoid;
+        border-radius: 11px;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.07);
+        background: #111;
+        transition:
+          border-color 0.28s,
+          box-shadow 0.28s;
+        cursor: zoom-in;
+        margin-bottom: 12px;
+        display: block;
+      }
+      .expand-img-item:hover {
+        border-color: rgba(201, 168, 76, 0.5);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+      }
+      .expand-img-item img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      /* ============================================
+   LIGHTBOX
+============================================ */
+      .lb-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.96);
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation: lbIn 0.22s ease both;
+        backdrop-filter: blur(10px);
+      }
+      @keyframes lbIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      .lb-inner {
+        position: relative;
+        max-width: 92vw;
+        max-height: 92vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .lb-img {
+        max-width: 90vw;
+        max-height: 82vh;
+        object-fit: contain;
+        border-radius: 6px;
+        display: block;
+        animation: lbImgIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) both;
+      }
+      @keyframes lbImgIn {
+        from {
+          opacity: 0;
+          transform: scale(0.93);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+      .lb-close {
+        position: fixed;
+        top: 20px;
+        right: 22px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        color: #fff;
+        font-size: 22px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.2s;
+        line-height: 1;
+      }
+      .lb-close:hover {
+        background: rgba(201, 168, 76, 0.3);
+      }
+      .lb-nav-btn {
+        position: fixed;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        color: #fff;
+        font-size: 22px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s;
+        user-select: none;
+      }
+      .lb-nav-btn:hover {
+        background: rgba(201, 168, 76, 0.3);
+        border-color: var(--gold);
+      }
+      .lb-prev {
+        left: 16px;
+      }
+      .lb-next {
+        right: 16px;
+      }
+      .lb-counter {
+        margin-top: 14px;
+        font-size: 11px;
+        letter-spacing: 0.18em;
+        color: rgba(255, 255, 255, 0.4);
+        font-family: "Tenor Sans", sans-serif;
+        font-weight: 400;
+      }
+
+      /* LOAD MORE */
+      .load-more-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 14px;
+        padding: 46px 52px 76px;
+        margin-top: 32px;
+      }
+      .load-more-text {
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        color: var(--gold);
+        cursor: pointer;
+        transition: opacity 0.25s;
+        text-transform: uppercase;
+      }
+      .load-more-text:hover {
+        opacity: 0.7;
+      }
+      .load-more-btn {
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        border: 1.5px solid var(--gold);
+        background: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: background 0.25s;
+      }
+      .load-more-btn:hover {
+        background: var(--gold);
+      }
+      .load-more-btn:hover svg {
+        stroke: var(--black);
+      }
+      .load-more-btn svg {
+        width: 14px;
+        height: 14px;
+        stroke: var(--gold);
+        fill: none;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        transition: stroke 0.25s;
+      }
+
+      /* ============================================
+   FREELANCER PACKAGES SECTION
+============================================ */
+      #packages {
+        background: var(--black);
+        padding: 100px 52px;
+      }
+      .packages-header {
+        text-align: center;
+        margin-bottom: 64px;
+      }
+      .packages-eyebrow {
+        font-size: 10px;
+        font-weight: 400;
+        font-family: "Tenor Sans", sans-serif;
+        letter-spacing: 0.28em;
+        color: var(--gold);
+        text-transform: uppercase;
+        margin-bottom: 14px;
+      }
+      .packages-title {
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 600;
+        font-size: clamp(36px, 4.6vw, 64px);
+        line-height: 1.06;
+        letter-spacing: 0.01em;
+        color: var(--white);
+        margin-bottom: 16px;
+      }
+      .packages-sub {
+        font-family: "Outfit", sans-serif;
+        font-size: 14px;
+        font-weight: 300;
+        color: rgba(255, 255, 255, 0.52);
+        max-width: 380px;
+        margin: 0 auto;
+      }
+      .packages-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 22px;
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+      .pkg-card {
+        background: #0a0a0a;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 20px;
+        padding: 36px 30px 32px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        transition:
+          transform 0.32s cubic-bezier(0.16, 1, 0.3, 1),
+          border-color 0.3s,
+          box-shadow 0.3s;
+        overflow: hidden;
+      }
+      .pkg-card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 20px;
+        background: linear-gradient(
+          135deg,
+          rgba(201, 168, 76, 0) 0%,
+          rgba(201, 168, 76, 0.04) 100%
+        );
+        opacity: 0;
+        transition: opacity 0.3s;
+        pointer-events: none;
+      }
+      .pkg-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+      }
+      .pkg-card:hover::before {
+        opacity: 1;
+      }
+      .pkg-card.pkg-popular {
+        border-color: var(--gold);
+        background: linear-gradient(145deg, #0a0a0a 0%, #0f0d07 100%);
+        box-shadow: 0 0 40px rgba(201, 168, 76, 0.1);
+      }
+      .pkg-card.pkg-popular:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 24px 64px rgba(201, 168, 76, 0.18);
+      }
+      .pkg-popular-badge {
+        position: absolute;
+        top: -1px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: var(--gold);
+        color: #000;
+        font-family: "Tenor Sans", sans-serif;
+        font-size: 9px;
+        font-weight: 400;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        padding: 5px 18px;
+        border-radius: 0 0 10px 10px;
+        white-space: nowrap;
+      }
+      .pkg-top {
+        margin-bottom: 28px;
+        padding-top: 8px;
+      }
+      .pkg-name {
+        font-family: "Tenor Sans", sans-serif;
+        font-weight: 400;
+        font-size: 11px;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-bottom: 12px;
+      }
+      .pkg-price {
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 600;
+        font-size: clamp(40px, 3.5vw, 54px);
+        color: var(--white);
+        line-height: 1;
+        letter-spacing: -0.01em;
+      }
+      .pkg-price-sub {
+        font-family: "Outfit", sans-serif;
+        font-size: 12px;
+        font-weight: 300;
+        color: rgba(255, 255, 255, 0.4);
+        margin-top: 4px;
+      }
+      .pkg-divider {
+        height: 1px;
+        background: rgba(255, 255, 255, 0.06);
+        margin: 22px 0;
+      }
+      .pkg-meta {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 22px;
+      }
+      .pkg-meta-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+      }
+      .pkg-meta-label {
+        font-family: "Outfit", sans-serif;
+        font-size: 12px;
+        font-weight: 400;
+        color: rgba(255, 255, 255, 0.5);
+      }
+      .pkg-meta-val {
+        font-family: "Outfit", sans-serif;
+        font-size: 12px;
+        font-weight: 600;
+        color: var(--white);
+      }
+      .pkg-meta-val.gold {
+        color: var(--gold);
+      }
+      .pkg-features {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 9px;
+        margin-bottom: 28px;
+        flex: 1;
+      }
+      .pkg-feature {
+        display: flex;
+        align-items: flex-start;
+        gap: 9px;
+        font-family: "Outfit", sans-serif;
+        font-size: 13px;
+        font-weight: 300;
+        color: rgba(255, 255, 255, 0.72);
+        line-height: 1.4;
+      }
+      .pkg-feature-icon {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background: rgba(201, 168, 76, 0.14);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        margin-top: 2px;
+      }
+      .pkg-feature-icon svg {
+        width: 9px;
+        height: 9px;
+        stroke: var(--gold);
+        fill: none;
+        stroke-width: 2.5;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+      .pkg-btn {
+        display: block;
+        width: 100%;
+        font-family: "Tenor Sans", sans-serif;
+        font-size: 11px;
+        font-weight: 400;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        padding: 16px 24px;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 10px;
+        transition: all 0.28s ease;
+        cursor: pointer;
+        border: none;
+        margin-top: auto;
+      }
+      .pkg-btn-outline {
+        background: transparent;
+        color: var(--gold);
+        border: 1.5px solid rgba(201, 168, 76, 0.45);
+      }
+      .pkg-btn-outline:hover {
+        background: rgba(201, 168, 76, 0.1);
+        border-color: var(--gold);
+      }
+      .pkg-btn-solid {
+        background: var(--gold);
+        color: #000;
+        border: 1.5px solid var(--gold);
+      }
+      .pkg-btn-solid:hover {
+        background: var(--gold-light);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(201, 168, 76, 0.3);
+      }
+      .pkg-include-row {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-family: "Outfit", sans-serif;
+        font-size: 12px;
+        font-weight: 300;
+        color: rgba(255, 255, 255, 0.5);
+      }
+      .pkg-include-row .check-yes {
+        color: #4caf7d;
+      }
+      .pkg-include-row .check-no {
+        color: rgba(255, 255, 255, 0.22);
+      }
+
+      /* ABOUT */
+      #about {
+        background: var(--black);
+        padding-top: 80px;
+      }
+      .about-hero {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        padding: 66px 52px 56px;
+        gap: 36px;
+        border-bottom: 1px solid rgba(201, 168, 76, 0.14);
+      }
+      .about-heading {
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 600;
+        font-size: clamp(36px, 5vw, 68px);
+        line-height: 1.06;
+        letter-spacing: 0.01em;
+        color: var(--white);
+        margin-bottom: 28px;
+      }
+      .about-bio {
+        font-family: "Outfit", sans-serif;
+        font-size: 15px;
+        font-weight: 300;
+        color: rgba(255, 255, 255, 0.7);
+        line-height: 1.84;
+        max-width: 450px;
+        margin-bottom: 38px;
+      }
+      .cv-download-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        font-family: "Tenor Sans", sans-serif;
+        font-size: 10px;
+        font-weight: 400;
+        letter-spacing: 0.2em;
+        color: var(--gold);
+        border: 1.5px solid var(--gold);
+        padding: 13px 26px;
+        text-decoration: none;
+        transition: all 0.28s;
+        border-radius: 2px;
+        text-transform: uppercase;
+      }
+      .cv-download-btn svg {
+        width: 14px;
+        height: 14px;
+        stroke: var(--gold);
+        fill: none;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        transition: stroke 0.28s;
+      }
+      .cv-download-btn:hover {
+        background: var(--gold);
+        color: var(--black);
+      }
+      .cv-download-btn:hover svg {
+        stroke: var(--black);
+      }
+      .about-signature {
+        font-family: "Dancing Script", cursive;
+        font-size: 36px;
+        color: var(--white);
+        opacity: 0.86;
+        line-height: 1;
+        margin-top: 8px;
+      }
+      .about-mobile-name-row {
+        display: block; /* heading always visible on desktop */
+      }
+      .about-mobile-avatar {
+        display: none; /* avatar hidden on desktop */
+      }
+      .about-right {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .about-profile-wrap {
+        position: relative;
+        width: 100%;
+        max-width: 440px;
+        margin-left: auto;
+        border-radius: 4px;
+        overflow: hidden;
+      }
+      .about-profile-wrap img {
+        width: 100%;
+        height: auto;
+        display: block;
+        -webkit-mask-image: linear-gradient(
+          to right,
+          transparent 0%,
+          black 12%,
+          black 88%,
+          transparent 100%
+        );
+        mask-image: linear-gradient(
+          to right,
+          transparent 0%,
+          black 12%,
+          black 88%,
+          transparent 100%
+        );
+      }
+      .about-lower {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        border-bottom: 1px solid rgba(201, 168, 76, 0.14);
+      }
+      .about-lower-left {
+        padding: 48px 52px;
+        border-right: 1px solid rgba(201, 168, 76, 0.14);
+      }
+      .about-lower-right {
+        padding: 48px 52px;
+      }
+      .section-label {
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 400;
+        font-style: italic;
+        font-size: 20px;
+        color: var(--gold);
+        margin-bottom: 32px;
+        letter-spacing: 0.02em;
+      }
+      .skill-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 14px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      }
+      .skill-row:last-child {
+        border-bottom: none;
+      }
+      .skill-name {
+        font-family: "Outfit", sans-serif;
+        font-size: 14.5px;
+        font-weight: 400;
+        color: rgba(255, 255, 255, 0.82);
+      }
+      .skill-dots {
+        display: flex;
+        gap: 6px;
+      }
+      .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        border: 1.5px solid rgba(201, 168, 76, 0.45);
+        background: transparent;
+      }
+      .dot.filled {
+        background: var(--gold);
+        border-color: var(--gold);
+      }
+      .tools-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+      .tool-chip {
+        width: 76px;
+        height: 76px;
+        border: 1.5px solid var(--gold);
+        border-radius: 13px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Tenor Sans", sans-serif;
+        font-weight: 400;
+        font-size: 17px;
+        color: var(--gold);
+        letter-spacing: 0.04em;
+        cursor: default;
+        transition: all 0.25s;
+      }
+      .tool-chip:hover {
+        background: var(--gold);
+        color: var(--black);
+      }
+      .tool-chip.wide {
+        width: auto;
+        padding: 0 20px;
+        font-size: 15px;
+      }
+      .stats-strip {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+      }
+      .stat-cell {
+        padding: 48px 38px;
+        border-right: 1px solid rgba(201, 168, 76, 0.14);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 9px;
+      }
+      .stat-cell:last-child {
+        border-right: none;
+      }
+      .stat-number {
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 600;
+        font-size: clamp(38px, 4.6vw, 62px);
+        color: var(--gold);
+        line-height: 1;
+        letter-spacing: -0.02em;
+      }
+      .stat-label {
+        font-family: "Outfit", sans-serif;
+        font-size: 13px;
+        font-weight: 300;
+        color: rgba(255, 255, 255, 0.56);
+      }
+
+      /* CONTACT */
+      #contact {
+        background: var(--black);
+        padding-top: 80px;
+      }
+      .contact-wrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 56px;
+        padding: 76px 52px 86px;
+        align-items: start;
+      }
+      .contact-heading {
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 600;
+        font-size: clamp(44px, 6vw, 82px);
+        line-height: 1.0;
+        letter-spacing: 0.01em;
+        color: var(--white);
+        margin-bottom: 26px;
+      }
+      .contact-sub {
+        font-family: "Outfit", sans-serif;
+        font-size: 14px;
+        font-weight: 300;
+        color: rgba(255, 255, 255, 0.52);
+        line-height: 1.7;
+        max-width: 280px;
+        margin-bottom: 48px;
+      }
+      .contact-info-list {
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+      }
+      .contact-info-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+      }
+      .ci-icon {
+        width: 36px;
+        height: 36px;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .ci-icon svg {
+        width: 20px;
+        height: 20px;
+        stroke: var(--gold);
+        fill: none;
+        stroke-width: 1.6;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+      .ci-label {
+        font-family: "Tenor Sans", sans-serif;
+        font-size: 9px;
+        font-weight: 400;
+        letter-spacing: 0.2em;
+        color: var(--gold);
+        margin-bottom: 4px;
+        text-transform: uppercase;
+      }
+      .ci-value {
+        font-family: "Outfit", sans-serif;
+        font-size: 14px;
+        font-weight: 300;
+        color: rgba(255, 255, 255, 0.72);
+        line-height: 1.55;
+      }
+      .ci-value a {
+        color: inherit;
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+      .ci-value a:hover {
+        color: var(--gold);
+      }
+      .social-links {
+        display: flex;
+        gap: 0;
+        flex-wrap: wrap;
+      }
+      .social-links a {
+        font-family: "Outfit", sans-serif;
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.7);
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+      .social-links a:hover {
+        color: var(--gold);
+      }
+      .social-links .sep {
+        color: rgba(255, 255, 255, 0.22);
+        padding: 0 7px;
+      }
+      .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+      }
+      .form-field input,
+      .form-field textarea {
+        width: 100%;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(201, 168, 76, 0.3);
+        color: var(--white);
+        font-family: "Outfit", sans-serif;
+        font-size: 14px;
+        font-weight: 300;
+        padding: 18px 20px;
+        outline: none;
+        border-radius: 3px;
+        transition:
+          border-color 0.3s,
+          background 0.3s;
+        resize: none;
+      }
+      .form-field input::placeholder,
+      .form-field textarea::placeholder {
+        color: rgba(255, 255, 255, 0.28);
+      }
+      .form-field input:focus,
+      .form-field textarea:focus {
+        border-color: var(--gold);
+        background: rgba(201, 168, 76, 0.03);
+      }
+      .form-field textarea {
+        height: 200px;
+      }
+      .btn-send {
+        font-family: "Tenor Sans", sans-serif;
+        font-size: 11px;
+        font-weight: 400;
+        letter-spacing: 0.22em;
+        padding: 18px 48px;
+        background: var(--gold);
+        color: var(--black);
+        border: none;
+        cursor: pointer;
+        transition: all 0.28s;
+        margin-top: 4px;
+        text-transform: uppercase;
+      }
+      .btn-send:hover {
+        background: var(--gold-light);
+        transform: translateY(-2px);
+      }
+      .form-status {
+        font-family: "Outfit", sans-serif;
+        font-size: 12px;
+        padding: 11px 14px;
+        border-radius: 3px;
+        display: none;
+      }
+      .form-status.success {
+        display: block;
+        background: rgba(76, 175, 125, 0.1);
+        border: 1px solid rgba(76, 175, 125, 0.3);
+        color: #7dcf7d;
+      }
+      .form-status.error {
+        display: block;
+        background: rgba(224, 85, 85, 0.1);
+        border: 1px solid rgba(224, 85, 85, 0.3);
+        color: #e08080;
+      }
+
+      /* FOOTER */
+      footer {
+        border-top: 1px solid rgba(255, 255, 255, 0.07);
+        padding: 56px 52px 48px;
+        display: grid;
+        grid-template-columns: 1.4fr 1fr 1fr 1.4fr;
+        gap: 36px;
+        align-items: start;
+      }
+      .footer-logo {
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 700;
+        font-size: 26px;
+        letter-spacing: 0.08em;
+        color: var(--white);
+        margin-bottom: 10px;
+      }
+      .footer-tagline {
+        font-family: "Outfit", sans-serif;
+        font-size: 12px;
+        font-weight: 300;
+        color: rgba(255, 255, 255, 0.36);
+      }
+      .footer-col-title {
+        font-family: "Tenor Sans", sans-serif;
+        font-size: 10px;
+        font-weight: 400;
+        letter-spacing: 0.2em;
+        color: var(--white);
+        margin-bottom: 18px;
+        text-transform: uppercase;
+      }
+      .footer-links {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .footer-links a {
+        font-family: "Outfit", sans-serif;
+        font-size: 13px;
+        font-weight: 300;
+        color: rgba(255, 255, 255, 0.45);
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+      .footer-links a:hover {
+        color: var(--gold);
+      }
+      .footer-cta-text {
+        font-family: "Outfit", sans-serif;
+        font-size: 12px;
+        font-weight: 300;
+        color: rgba(255, 255, 255, 0.45);
+        margin-bottom: 5px;
+      }
+      .footer-cta-email {
+        font-family: "Outfit", sans-serif;
+        font-size: 12px;
+        font-weight: 500;
+        color: rgba(255, 255, 255, 0.72);
+        text-decoration: none;
+        transition: color 0.2s;
+        display: block;
+        margin-bottom: 28px;
+      }
+      .footer-cta-email:hover {
+        color: var(--gold);
+      }
+      .footer-copy {
+        font-family: "Outfit", sans-serif;
+        font-size: 11px;
+        font-weight: 300;
+        color: rgba(255, 255, 255, 0.26);
+      }
+      .scroll-ring-wrap {
+        position: relative;
+        width: 52px;
+        height: 52px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .scroll-ring-wrap svg {
+        width: 52px;
+        height: 52px;
+        animation: ringSpinFoot 14s linear infinite;
+      }
+      @keyframes ringSpinFoot {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      .scroll-ring-dot {
+        position: absolute;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: var(--gold);
+      }
+
+      /* AVAILABILITY BADGE */
+      .avail-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 7px 14px 7px 10px;
+        border-radius: 40px;
+        font-family: "Tenor Sans", sans-serif;
+        font-size: 10px;
+        font-weight: 400;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        border: 1px solid;
+        margin-bottom: 22px;
+        width: fit-content;
+        animation: fadeUp 0.9s ease 0.2s both;
+      }
+      .avail-badge.available {
+        background: rgba(76, 175, 125, 0.1);
+        border-color: rgba(76, 175, 125, 0.35);
+        color: #4caf7d;
+      }
+      .avail-badge.limited {
+        background: rgba(224, 160, 48, 0.1);
+        border-color: rgba(224, 160, 48, 0.35);
+        color: #e0a030;
+      }
+      .avail-badge.booked {
+        background: rgba(224, 85, 85, 0.1);
+        border-color: rgba(224, 85, 85, 0.35);
+        color: #e05555;
+      }
+      .avail-dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        flex-shrink: 0;
+      }
+      .avail-badge.available .avail-dot {
+        background: #4caf7d;
+        animation: availPulse 2s ease infinite;
+      }
+      .avail-badge.limited .avail-dot {
+        background: #e0a030;
+      }
+      .avail-badge.booked .avail-dot {
+        background: #e05555;
+      }
+      @keyframes availPulse {
+        0%,
+        100% {
+          box-shadow: 0 0 0 0 rgba(76, 175, 125, 0.5);
+        }
+        50% {
+          box-shadow: 0 0 0 5px rgba(76, 175, 125, 0);
+        }
+      }
+
+      /* DOWNLOAD PDF BUTTON */
+      .btn-pdf {
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        font-family: "Tenor Sans", sans-serif;
+        font-size: 10px;
+        font-weight: 400;
+        letter-spacing: 0.18em;
+        color: var(--white);
+        border: 1.5px solid rgba(255, 255, 255, 0.2);
+        padding: 12px 22px;
+        text-decoration: none;
+        transition: all 0.28s;
+        border-radius: 2px;
+        text-transform: uppercase;
+      }
+      .btn-pdf:hover {
+        border-color: var(--gold);
+        color: var(--gold);
+      }
+      .btn-pdf svg {
+        width: 13px;
+        height: 13px;
+        stroke: currentColor;
+        fill: none;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      /* NAV MOBILE */
+      .nav-hamburger {
+        display: none;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 6px;
+        color: var(--white);
+      }
+      .nav-hamburger svg {
+        width: 22px;
+        height: 22px;
+        stroke: currentColor;
+        fill: none;
+        stroke-width: 2;
+        stroke-linecap: round;
+      }
+      .nav-mobile-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 190;
+        backdrop-filter: blur(4px);
+      }
+      .nav-mobile-overlay.open {
+        display: block;
+      }
+
+      @media (max-width: 992px) {
+        nav {
+          padding: 14px 28px;
+        }
+        nav.nav-scrolled {
+          padding: 12px 28px;
+        }
+        .nav-links {
+          gap: 24px;
+        }
+        .hero-content-area {
+          padding: 0 28px;
+          padding-top: 66px;
+        }
+        .bottom-split {
+          padding: 44px 28px 52px;
+          gap: 40px;
+        }
+        .work-hero {
+          padding: 44px 28px 38px;
+        }
+        .work-filters {
+          padding: 0 28px;
+        }
+        .projects-outer {
+          padding: 28px 28px 0;
+        }
+        .load-more-wrap {
+          padding: 36px 28px 60px;
+        }
+        .about-hero {
+          padding: 56px 28px 44px;
+        }
+        .about-lower-left {
+          padding: 40px 28px;
+        }
+        .about-lower-right {
+          padding: 40px 28px;
+        }
+        .contact-wrap {
+          padding: 60px 28px 70px;
+        }
+        footer {
+          padding: 44px 28px 36px;
+        }
+        #packages {
+          padding: 80px 28px;
+        }
+      }
+      /* =====================================================
+         MOBILE LAYOUT — 768px and below
+         Premium editorial single-column experience.
+         Desktop layout is completely untouched.
+      ===================================================== */
+      @media (max-width: 768px) {
+
+        /* --- GLOBAL SPACING TOKENS --- */
+        :root {
+          --mob-px: 20px;       /* horizontal page padding  */
+          --mob-sec: 64px;      /* section vertical padding */
+          --mob-gap: 24px;      /* standard gap             */
+        }
+
+        /* --- NAV --- */
+        nav {
+          padding: 14px var(--mob-px);
+        }
+        nav.nav-scrolled {
+          padding: 12px var(--mob-px);
+        }
+        /* Slide-in side drawer */
+        .nav-links {
+          position: fixed;
+          top: 0; right: -100%; bottom: 0;
+          width: 75vw;
+          max-width: 300px;
+          background: rgba(5, 5, 5, 0.98);
+          backdrop-filter: blur(24px);
+          -webkit-backdrop-filter: blur(24px);
+          border-left: 1px solid rgba(201, 168, 76, 0.2);
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0;
+          padding: 90px var(--mob-px) 48px;
+          z-index: 195;
+          transition: right 0.36s cubic-bezier(0.16, 1, 0.3, 1);
+          list-style: none;
+        }
+        .nav-links.mobile-open { right: 0; }
+        .nav-links li { width: 100%; }
+        .nav-links a {
+          display: block;
+          font-family: "Cormorant Garamond", serif;
+          font-size: 22px;
+          font-weight: 600;
+          letter-spacing: 0.04em;
+          padding: 16px 0;
+          border-bottom: 1px solid rgba(255,255,255,0.05);
+          color: var(--white);
+        }
+        .nav-links a:hover { color: var(--gold); }
+        .nav-links a::after { bottom: -1px; }
+        /* Add a gold CONTACT CTA at bottom of drawer */
+        .nav-links li:last-child a {
+          color: var(--gold);
+          border-bottom: none;
+          margin-top: 12px;
+          font-style: italic;
+        }
+        .nav-hire { width: 46px; height: 46px; }
+        .nav-hire svg.hire-ring { width: 46px; height: 46px; }
+        .nav-hamburger { display: block; }
+
+        /* --- HERO — text overlaid on image, original structure restored --- */
+        #home {
+          position: relative;
+          min-height: 100vh;
+          display: flex;
+          flex-direction: column;
+        }
+        /* bg stays absolute behind content, just like desktop */
+        .hero-bg {
+          position: absolute;
+          top: 0; left: 0; right: 0;
+          height: 100vh;
+          z-index: 0;
+          overflow: hidden;
+          width: 100%;
+        }
+        .hero-bg picture {
+          display: block;
+          width: 100%;
+          height: 100%;
+        }
+        .hero-bg img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: 62% center;
+        }
+        /* Dark gradient across the full height, heavier on left where text sits,
+           lighter toward the right so the subjects stay visible */
+        .hero-bg::after {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background:
+            linear-gradient(
+              to right,
+              rgba(0,0,0,0.82) 0%,
+              rgba(0,0,0,0.60) 45%,
+              rgba(0,0,0,0.18) 100%
+            ),
+            linear-gradient(
+              to bottom,
+              rgba(0,0,0,0.35) 0%,
+              transparent 30%,
+              transparent 70%,
+              rgba(0,0,0,0.55) 100%
+            );
+        }
+        /* Content sits over image exactly like desktop */
+        .hero-content-area {
+          position: relative;
+          z-index: 1;
+          height: 100vh;
+          display: flex;
+          align-items: center;
+          padding: 0 var(--mob-px);
+          padding-top: 70px;
+        }
+        .hero-left {
+          max-width: 100%;
+          width: 100%;
+          animation: none;
+        }
+        .hero-heading {
+          font-size: clamp(30px, 8.5vw, 46px);
+          margin-bottom: 14px;
+          line-height: 1.08;
+        }
+        .hero-sub {
+          font-size: 13px;
+          max-width: 85%;
+          margin-bottom: 24px;
+        }
+        #avail-badge-wrap { margin-bottom: 10px; }
+        .hero-buttons {
+          flex-direction: column;
+          gap: 10px;
+          align-items: stretch;
+          width: 100%;
+          max-width: 280px;
+        }
+        .btn {
+          width: 100%;
+          text-align: center;
+          padding: 14px 20px;
+          font-size: 10px;
+        }
+        .btn-pdf {
+          display: none !important;
+        }
+
+        /* Ticker — tighten */
+        .ticker-item { font-size: 9px; padding: 0 14px; }
+
+        /* Bottom split — single column */
+        .bottom-split {
+          grid-template-columns: 1fr;
+          padding: 40px var(--mob-px) 48px;
+          gap: 28px;
+        }
+        .bottom-quote {
+          font-size: clamp(22px, 6.5vw, 34px);
+          line-height: 1.2;
+        }
+        .bottom-desc { max-width: 100%; font-size: 14px; }
+
+        /* --- WORK SECTION --- */
+        #work { padding-top: 0; }
+        .work-hero {
+          grid-template-columns: 1fr;
+          padding: 48px var(--mob-px) 32px;
+          gap: 16px;
+        }
+        .work-hero-right { display: none; }
+        .work-title {
+          font-size: clamp(44px, 12vw, 72px);
+          line-height: 0.94;
+        }
+        .work-subtitle { font-size: 13px; margin-bottom: 20px; }
+
+        /* Filters — horizontally scrollable */
+        .work-filters {
+          padding: 0 var(--mob-px);
+          overflow-x: auto;
+          -webkit-overflow-scrolling: touch;
+          scrollbar-width: none;
+          gap: 0;
+        }
+        .work-filters::-webkit-scrollbar { display: none; }
+        .filter-tab {
+          flex-shrink: 0;
+          padding: 16px 14px;
+          font-size: 9.5px;
+          letter-spacing: 0.12em;
+        }
+
+        /* Project grid — single column */
+        .projects-outer { padding: 20px var(--mob-px) 0; }
+        .projects-grid-wrap {
+          --proj-cols: 1 !important;
+          --proj-gap: 16px !important;
+          grid-template-columns: 1fr !important;
+        }
+        .project-card.card-strip { grid-column: 1 / -1; }
+        .project-card.card-strip .pc-thumb {
+          height: 52vw;
+          min-height: 200px;
+          max-height: 280px;
+        }
+        .pc-overlay { opacity: 1; }
+        .pc-info { padding: 14px 16px 16px; }
+        .pc-name { font-size: 15px; }
+        .load-more-wrap { padding: 28px var(--mob-px) 48px; }
+
+        /* Expand panel */
+        .project-expand { border-radius: 10px; margin-top: 4px; }
+        .expand-header {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 14px;
+          padding: 20px var(--mob-px) 16px;
+        }
+        .expand-title { font-size: 20px; }
+        .expand-close-btn { align-self: flex-end; margin-top: -48px; }
+        .expand-gallery { padding: 16px var(--mob-px) 24px; }
+        .expand-img-grid { columns: 1; column-gap: 0; }
+        .expand-img-grid .gi { break-inside: avoid; margin-bottom: 10px; }
+
+        /* --- ABOUT SECTION --- */
+        .about-hero {
+          grid-template-columns: 1fr;
+          padding: 56px var(--mob-px) 32px;
+          gap: 28px;
+        }
+        .about-right { display: none; }
+
+        /* --- MOBILE ABOUT AVATAR (beside name) --- */
+        .about-mobile-name-row {
+          display: flex;
+          align-items: flex-start;
+          gap: 14px;
+          margin-bottom: 20px;
+        }
+        .about-mobile-avatar {
+          display: flex;  /* override desktop none */
+          width: 70px;
+          height: 70px;
+          border-radius: 50%;
+          overflow: hidden;
+          flex-shrink: 0;
+          border: 2px solid rgba(201, 168, 76, 0.5);
+          background: #111;
+        }
+        .about-mobile-avatar img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center top;
+          mask-image: none !important;
+          -webkit-mask-image: none !important;
+        }
+        .about-mobile-name-row .about-heading {
+          margin-bottom: 0;
+          font-size: clamp(22px, 6vw, 32px);
+        }
+        .about-heading { font-size: clamp(30px, 8.5vw, 52px); line-height: 1.06; }
+        .about-bio { font-size: 14px; line-height: 1.8; }
+        .about-lower { grid-template-columns: 1fr; }
+        .about-lower-left {
+          border-right: none;
+          border-bottom: 1px solid rgba(201, 168, 76, 0.14);
+          padding: 32px var(--mob-px);
+        }
+        .about-lower-right { padding: 32px var(--mob-px); }
+        .stats-strip { grid-template-columns: 1fr 1fr; }
+        .stat-cell { padding: 28px 16px; gap: 6px; }
+        .stat-number { font-size: clamp(30px, 8vw, 46px); }
+        .stat-label { font-size: 11px; }
+        .tools-grid { gap: 8px; }
+        .tool-chip { width: 62px; height: 62px; font-size: 15px; }
+
+        /* --- PACKAGES — 3 columns with features, compact but complete --- */
+        #packages { padding: 48px var(--mob-px) 52px; }
+        .packages-header { margin-bottom: 28px; }
+        .packages-eyebrow { font-size: 8px; letter-spacing: 0.2em; }
+        .packages-title { font-size: clamp(24px, 6.5vw, 38px); margin-bottom: 8px; }
+        .packages-sub { font-size: 11px; }
+        .packages-grid {
+          grid-template-columns: repeat(3, 1fr);
+          gap: 8px;
+          align-items: start;
+        }
+        .pkg-card {
+          padding: 14px 10px 14px;
+          border-radius: 10px;
+          display: flex;
+          flex-direction: column;
+        }
+        .pkg-popular-badge {
+          font-size: 6.5px;
+          padding: 3px 6px;
+          letter-spacing: 0.08em;
+        }
+        .pkg-name {
+          font-size: 7.5px;
+          letter-spacing: 0.12em;
+          margin-bottom: 6px;
+        }
+        .pkg-price {
+          font-size: clamp(20px, 5vw, 28px);
+          line-height: 1;
+          margin-bottom: 1px;
+        }
+        .pkg-price sup { font-size: 10px; }
+        .pkg-price-sub { font-size: 9px; margin-bottom: 10px; }
+        /* Meta row — delivery / revisions */
+        .pkg-meta { gap: 6px; margin-bottom: 10px; }
+        .pkg-meta-row { padding: 5px 0; }
+        .pkg-meta-label { font-size: 9px; }
+        .pkg-meta-val { font-size: 9px; }
+        /* Divider */
+        .pkg-divider { margin: 8px 0; }
+        /* Features — smaller font, tighter spacing, all visible */
+        .pkg-features {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          margin-bottom: 12px;
+          flex: 1;
+        }
+        .pkg-feature {
+          font-size: 9.5px;
+          line-height: 1.35;
+          gap: 6px;
+        }
+        .pkg-feature-icon {
+          width: 12px;
+          height: 12px;
+          flex-shrink: 0;
+          margin-top: 1px;
+        }
+        .pkg-feature-icon svg { width: 7px; height: 7px; }
+        /* Include row */
+        .pkg-include-row {
+          display: flex;
+          font-size: 9px;
+          gap: 5px;
+          margin-bottom: 4px;
+        }
+        /* Order button */
+        .pkg-btn {
+          font-size: 8px;
+          letter-spacing: 0.1em;
+          padding: 10px 4px;
+          border-radius: 7px;
+          margin-top: auto;
+        }
+
+        /* --- CONTACT SECTION --- */
+        .contact-wrap {
+          grid-template-columns: 1fr;
+          padding: var(--mob-sec) var(--mob-px);
+          gap: 40px;
+        }
+        .contact-heading {
+          font-size: clamp(32px, 9vw, 54px);
+          line-height: 1.04;
+        }
+        .contact-sub { font-size: 13px; }
+        .contact-info-list { gap: 20px; }
+        .social-links { gap: 14px; }
+        .form-field input,
+        .form-field textarea { font-size: 15px; }
+
+        /* --- FOOTER --- */
+        footer {
+          grid-template-columns: 1fr;
+          padding: 48px var(--mob-px) 28px;
+          gap: 36px;
+        }
+        .footer-cta { padding: var(--mob-sec) var(--mob-px); }
+        .footer-cta-text { font-size: 12px; }
+        .footer-copy { font-size: 10px; }
+
+      } /* end @media 768px */
+
+      /* =====================================================
+         SMALL PHONES — 420px and below
+      ===================================================== */
+      @media (max-width: 420px) {
+        :root {
+          --mob-px: 14px;
+          --mob-sec: 48px;
+        }
+        .hero-heading { font-size: clamp(26px, 9vw, 38px); }
+        .hero-sub { max-width: 92%; }
+        .nav-links { width: 84vw; padding-top: 80px; }
+        .nav-links a { font-size: 19px; }
+        .stats-strip { grid-template-columns: 1fr 1fr; }
+        .stat-cell { padding: 20px 10px; }
+        .work-title { font-size: clamp(36px, 12vw, 56px); }
+        .contact-heading { font-size: clamp(26px, 9vw, 42px); }
+        /* Packages — keep 3 cols, tighten further */
+        .packages-grid { gap: 6px; }
+        .pkg-card { padding: 12px 8px 12px; }
+        .pkg-price { font-size: clamp(18px, 4.8vw, 24px); }
+        .pkg-feature { font-size: 8.5px; }
+        .pkg-btn { font-size: 7px; padding: 9px 3px; }
+        .filter-tab { padding: 13px 9px; font-size: 8.5px; }
+      }
+    </style>
+  <script>window.__PORTFOLIO_DATA__ = {"mode":"published","availability":"available","pdfPath":"","about":{"heading":"Designing visual\nsystems that make\nbrands unforgettable.","bio":"I am a graphic designer and creative director with a passion for creating meaningful, elegant and impactful designs. My goal is to help brands communicate their identity and build strong connections with their audience.","signatureName":"Talha Talha","profileImage":"profile pic.png","skills":[{"name":"Branding & Identity","filled":4},{"name":"Packaging Design","filled":4},{"name":"Web Design & UI/UX","filled":3},{"name":"Social Media Design","filled":4},{"name":"Typography Design","filled":4},{"name":"Creative Direction","filled":3}],"tools":[{"label":"Ps","wide":false},{"label":"Ai","wide":false},{"label":"Pr","wide":false},{"label":"Ae","wide":false},{"label":"Xd","wide":false},{"label":"Figma","wide":true}],"stats":[{"number":"10+","label":"Projects Completed"},{"number":"30+","label":"Happy Clients"},{"number":"4+","label":"Years Experience"},{"number":"10+","label":"Awards Received"}]},"contact":{"email":"muhammadtalhasaleem786007@gmail.com","phone":"+92 303 6703995","location":"Pakistan (Remote — Worldwide)","socials":[{"label":"Behance","url":"https://www.behance.net/talhasaleem25"},{"label":"Instagram","url":"https://www.instagram.com/mtalhasaleem007/"},{"label":"LinkedIn","url":"https://www.linkedin.com/in/muhammad-taha-saleem"},{"label":"Facebook","url":"https://m.facebook.com/profile.php?id=61560649695063"}],"formspreeEndpoint":"https://formspree.io/f/xaqkpgqa"},"projects":[{"id":1,"name":"CHOCOFFE","type":"Brand Identity","category":"branding","cardLayout":"grid","image":"BRAND MANUAL/BRAND MANUAL 01.png","gallery":["BRAND MANUAL/BRAND MANUAL 01.png","BRAND MANUAL/BRAND MANUAL 02.png","BRAND MANUAL/BRAND MANUAL 03.png","BRAND MANUAL/BRAND MANUAL 04.png","BRAND MANUAL/BRAND MANUAL 05.png","BRAND MANUAL/BRAND MANUAL 06.png","BRAND MANUAL/BRAND MANUAL 07.png","BRAND MANUAL/BRAND MANUAL 08.png","BRAND MANUAL/BRAND MANUAL 09.png","BRAND MANUAL/BRAND MANUAL 10.png","BRAND MANUAL/BRAND MANUAL 11.png","BRAND MANUAL/BRAND MANUAL 12.png"],"focalX":48,"focalY":37,"status":"published","imgScale":1.2,"imgX":0,"imgY":8},{"id":1780155450333,"name":"Poster designs","type":"Marketing Campaign","category":"poster","cardLayout":"grid","status":"published","image":"POSTERS/COFFEE POSTERS-01.png","gallery":["POSTERS/COFFEE POSTERS-01.png","POSTERS/COFFEE POSTERS-02.png","POSTERS/COFFEE POSTERS-03.png","POSTERS/COFFEE POSTERS-04.png","POSTERS/COFFEE POSTERS-05.png"],"focalX":50,"focalY":50,"imgTransform":{"x":-6,"y":4,"scale":1.03},"imgScale":1.25,"imgX":0,"imgY":10},{"id":1780155909047,"name":"UI And UX Design","type":"UI And UX Design","category":"web","cardLayout":"grid","status":"published","image":"UI DESIGN/web layout cover.png","gallery":["UI DESIGN/web layout 01.png","UI DESIGN/web layout 04.png","UI DESIGN/web layout 03.png","UI DESIGN/web layout 05.png","UI DESIGN/web layout 02.png"],"focalX":39,"focalY":50,"imgScale":1,"imgX":0,"imgY":0},{"id":1780156397341,"name":"Brand Design","type":"Brand Design","category":"branding","cardLayout":"grid","status":"published","image":"BRAND DESIGNS/LOGO.png","gallery":["BRAND DESIGNS/coffe shop_COFFEE BAG.png","BRAND DESIGNS/coffe shop_BILL.png","BRAND DESIGNS/coffe shop_LETTER HEAD.png","BRAND DESIGNS/coffe shop_REVIEW BOOK.png","BRAND DESIGNS/coffe shop.png","BRAND DESIGNS/coffe shop 1.png"],"focalX":50,"focalY":50,"imgScale":1,"imgX":0,"imgY":0}],"projectLayout":{"layout":"strip","cols":2,"gap":20,"radius":14,"ratio":"4 / 3"},"packages":{"enabled":true,"sectionTitle":"Services & Packages","sectionSub":"Professional design packages tailored to your needs and budget.","list":[{"name":"Basic","price":"$10","delivery":"1 Day","revisions":"Unlimited","sourceFile":false,"commercial":false,"features":["PNG & JPG Delivery","Brand Color Match","Unlimited Revisions Included"],"btnText":"Order Basic","btnLink":"#contact","popular":false},{"name":"Standard","price":"$30","delivery":"2 Days","revisions":"Unlimited","sourceFile":true,"commercial":true,"features":["Business Card Design","Social Media Kit","Source Files Included","Commercial License"],"btnText":"Order Standard","btnLink":"#contact","popular":true},{"name":"Premium","price":"$60","delivery":"3 Days","revisions":"Unlimited","sourceFile":true,"commercial":true,"features":["Packaging Design","Marketing Materials","Brand Guidelines PDF","Priority Support","Commercial License"],"btnText":"Order Premium","btnLink":"#contact","popular":false}]}};</script></head>
+  <body>
+    <!-- NAV -->
+    <div
+      class="nav-mobile-overlay"
+      id="nav-overlay"
+      onclick="closeNavMenu()"
+    ></div>
+    <nav id="navbar">
+      <a class="nav-logo" href="#home">TALHA<sup>®</sup></a>
+      <button
+        class="nav-hamburger"
+        id="nav-hamburger"
+        onclick="toggleNavMenu()"
+        aria-label="Menu"
+      >
+        <svg viewBox="0 0 24 24">
+          <line x1="3" y1="6" x2="21" y2="6" />
+          <line x1="3" y1="12" x2="21" y2="12" />
+          <line x1="3" y1="18" x2="21" y2="18" />
+        </svg>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li>
+          <a
+            href="#home"
+            class="active"
+            data-section="home"
+            onclick="closeNavMenu()"
+            >HOME</a
+          >
+        </li>
+        <li>
+          <a href="#work" data-section="work" onclick="closeNavMenu()">WORK</a>
+        </li>
+        <li>
+          <a href="#packages" data-section="packages" onclick="closeNavMenu()"
+            >PACKAGES</a
+          >
+        </li>
+        <li>
+          <a href="#about" data-section="about" onclick="closeNavMenu()"
+            >ABOUT</a
+          >
+        </li>
+        <li>
+          <a href="#contact" data-section="contact" onclick="closeNavMenu()"
+            >CONTACT</a
+          >
+        </li>
+      </ul>
+      <a class="nav-hire" href="#contact" title="Hire Me">
+        <svg
+          class="hire-ring"
+          viewBox="0 0 62 62"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <defs><path id="hcp" d="M31,5 A26,26 0 1,1 30.99,5" /></defs>
+          <text
+            font-family="Montserrat,sans-serif"
+            font-size="7"
+            font-weight="700"
+            fill="rgba(201,168,76,0.7)"
+            letter-spacing="3.2"
+          >
+            <textPath href="#hcp">HIRE ME • HIRE ME • HIRE ME •</textPath>
+          </text>
+        </svg>
+        <div class="nav-hire-dot">
+          <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+        </div>
+      </a>
+    </nav>
+
+    <!-- HOME -->
+    <section id="home">
+      <div class="hero-bg">
+        <picture>
+          <source media="(max-width: 768px)" srcset="Home_for_mobile.png" />
+          <img
+            id="hero-bg-img"
+            src="Home section.png"
+            alt="Portfolio hero background"
+            loading="eager"
+          />
+        </picture>
+      </div>
+      <div class="hero-content-area">
+        <div class="hero-left">
+          <h1 class="hero-heading">
+            Crafting Premium<br /><span style="color:var(--gold);">Visual Identities</span><br />for Modern Brands.
+          </h1>
+          <p class="hero-sub">
+            A creative design studio focused on branding, packaging, digital
+            experiences and visual storytelling.
+          </p>
+          <div id="avail-badge-wrap"></div>
+          <div class="hero-buttons">
+            <a href="#work" class="btn btn-outline">VIEW WORK</a>
+            <a href="#contact" class="btn btn-gold">CONTACT ME</a>
+            <a
+              href="#"
+              class="btn-pdf"
+              id="pdf-download-btn"
+              style="display: none"
+              aria-label="Download portfolio PDF"
+            >
+              <svg viewBox="0 0 24 24">
+                <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+              </svg>
+              PORTFOLIO PDF
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="ticker-strip">
+        <div class="ticker-track">
+          <span class="ticker-item">BRANDING</span
+          ><span class="ticker-dot">•</span>
+          <span class="ticker-item">PACKAGING</span
+          ><span class="ticker-dot">•</span>
+          <span class="ticker-item">WEB DESIGN</span
+          ><span class="ticker-dot">•</span>
+          <span class="ticker-item">SOCIAL MEDIA</span
+          ><span class="ticker-dot">•</span>
+          <span class="ticker-item">TYPOGRAPHY</span
+          ><span class="ticker-dot">•</span>
+          <span class="ticker-item">CREATIVE DIRECTION</span
+          ><span class="ticker-dot">•</span>
+          <span class="ticker-item">BRANDING</span
+          ><span class="ticker-dot">•</span>
+          <span class="ticker-item">PACKAGING</span
+          ><span class="ticker-dot">•</span>
+          <span class="ticker-item">WEB DESIGN</span
+          ><span class="ticker-dot">•</span>
+          <span class="ticker-item">SOCIAL MEDIA</span
+          ><span class="ticker-dot">•</span>
+          <span class="ticker-item">TYPOGRAPHY</span
+          ><span class="ticker-dot">•</span>
+          <span class="ticker-item">CREATIVE DIRECTION</span
+          ><span class="ticker-dot">•</span>
+        </div>
+      </div>
+      <div class="bottom-split">
+        <div class="bottom-quote">
+          Design is not decoration.<br />It is perception, emotion,<br />and
+          identity combined.
+        </div>
+        <div class="bottom-right">
+          <p class="bottom-desc">
+            We believe in creating meaningful visual experiences that connect
+            brands with people. Every detail crafted with purpose and precision.
+          </p>
+          <a href="#about" class="learn-more">LEARN MORE &nbsp;→</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section id="work">
+      <div class="work-hero">
+        <div class="work-bg" aria-hidden="true">
+          <img src="work section.png" alt="" loading="lazy" />
+        </div>
+        <div>
+          <h2 class="work-title">Selected<br />Projects</h2>
+          <p class="work-subtitle">
+            Exploring ideas, creating identities, and building visual
+            experiences.
+          </p>
+          <a href="#" class="btn-gold-outline">ALL PROJECTS</a>
+        </div>
+        <!-- <div class="work-hero-right">
+          <div class="featured-card">
+            <svg
+              style="
+                width: 26px;
+                height: 26px;
+                stroke: #c9a84c;
+                fill: none;
+                stroke-width: 1.2;
+                opacity: 0.8;
+              "
+              viewBox="0 0 40 40"
+            >
+              <path
+                d="M20 4 L24 16 L36 16 L26 24 L30 36 L20 28 L10 36 L14 24 L4 16 L16 16 Z"
+              />
+              <circle cx="20" cy="20" r="4" />
+            </svg>
+            <span class="fc-brand">CHOCOFFE</span>
+            <span class="fc-estd">— ESTD 2024 —</span>
+            <span class="fc-divider">✦ &nbsp; ✦ &nbsp; ✦</span>
+            <div class="fc-roast">
+              <div class="fc-roast-title">DARK<br />ROAST</div>
+              <div class="fc-roast-sub">PREMIUM COFFEE</div>
+            </div>
+          </div>
+        </div> -->
+      </div>
+      <div class="work-filters">
+        <button class="filter-tab active" data-filter="all">ALL</button>
+        <button class="filter-tab" data-filter="branding">BRANDING</button>
+        <button class="filter-tab" data-filter="packaging">PACKAGING</button>
+        <button class="filter-tab" data-filter="web">WEB DESIGN</button>
+        <button class="filter-tab" data-filter="poster">POSTER</button>
+        <button class="filter-tab" data-filter="social">SOCIAL MEDIA</button>
+      </div>
+      <div class="projects-outer">
+        <div class="projects-grid-wrap" id="projects-list-dynamic"></div>
+      </div>
+      <div class="load-more-wrap">
+        <span class="load-more-text">LOAD MORE PROJECTS</span>
+        <button class="load-more-btn">
+          <svg viewBox="0 0 24 24">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- PACKAGES -->
+    <section id="packages">
+      <div class="packages-header">
+        <p class="packages-eyebrow" id="pkg-eyebrow">PACKAGES</p>
+        <h2 class="packages-title" id="pkg-title">Services &amp; Packages</h2>
+        <p class="packages-sub" id="pkg-sub">
+          Professional design packages tailored to your needs and budget.
+        </p>
+      </div>
+      <div class="packages-grid" id="packages-grid"></div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="about-hero">
+        <div class="about-left">
+          <!-- Mobile-only: avatar shown beside the heading via flex row wrapper -->
+          <div class="about-mobile-name-row">
+            <div class="about-mobile-avatar">
+              <img
+                id="about-profile-img-mobile"
+                src="1779789891420_ChatGPT_Image_May_26__2026__02_16_14_PM.png"
+                alt="Talha profile"
+              />
+            </div>
+            <h2 class="about-heading" id="about-heading">
+              Designing visual<br />systems that make<br />brands unforgettable.
+            </h2>
+          </div>
+          <p class="about-bio" id="about-bio">
+            I am a graphic designer and creative director with a passion for
+            creating meaningful, elegant and impactful designs.
+          </p>
+          <div class="about-signature" id="about-signature">Talha</div>
+          <a
+            href="Muhammad_Talha_Saleem_Graphic_Designer_CV.docx"
+            download
+            class="cv-download-btn"
+          >
+            <svg viewBox="0 0 24 24">
+              <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg>
+            DOWNLOAD CV
+          </a>
+        </div>
+        <div class="about-right">
+          <div class="about-profile-wrap">
+            <img
+              id="about-profile-img"
+              src="1779789891420_ChatGPT_Image_May_26__2026__02_16_14_PM.png"
+              alt="Talha profile"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="about-lower">
+        <div class="about-lower-left">
+          <div class="section-label">My Expertise</div>
+          <div id="skills-list"></div>
+        </div>
+        <div class="about-lower-right">
+          <div class="section-label">Tools I Use</div>
+          <div class="tools-grid" id="tools-grid"></div>
+        </div>
+      </div>
+      <div class="stats-strip" id="stats-strip"></div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="contact-wrap">
+        <div class="contact-left">
+          <h2 class="contact-heading">
+            Let's Build<br />Something<br />Premium<br />Together.
+          </h2>
+          <p class="contact-sub">
+            Have a project in mind or want to collaborate? Reach out anytime.
+          </p>
+          <div class="contact-info-list">
+            <div class="contact-info-item">
+              <div class="ci-icon">
+                <svg viewBox="0 0 24 24">
+                  <rect x="2" y="4" width="20" height="16" rx="2" />
+                  <polyline points="2,4 12,13 22,4" />
+                </svg>
+              </div>
+              <div>
+                <div class="ci-label">EMAIL</div>
+                <div class="ci-value">
+                  <a href="#" class="dynamic-email" id="ci-email"
+                    >muhammadtalhasaleem786007@gmail.com</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="ci-icon">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.7A2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <div class="ci-label">PHONE</div>
+                <div class="ci-value">
+                  <a id="ci-phone" href="tel:+923036703995">+92 303 6703995</a>
+                </div>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="ci-icon">
+                <svg viewBox="0 0 24 24">
+                  <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+              </div>
+              <div>
+                <div class="ci-label">LOCATION</div>
+                <div class="ci-value" id="ci-location">
+                  Pakistan (Remote — Worldwide)
+                </div>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="ci-icon">
+                <svg viewBox="0 0 24 24">
+                  <line x1="22" y1="2" x2="11" y2="13" />
+                  <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                </svg>
+              </div>
+              <div>
+                <div class="ci-label">FOLLOW</div>
+                <div class="ci-value">
+                  <div class="social-links" id="ci-socials"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-right">
+          <div class="contact-form">
+            <!-- Package inquiry banner — shown when arriving from a package button -->
+            <div id="pkg-inquiry-banner" style="display:none; align-items:center; justify-content:space-between; gap:12px; background:rgba(201,168,76,0.07); border:1px solid rgba(201,168,76,0.35); border-radius:8px; padding:12px 16px; margin-bottom:4px;">
+              <div style="display:flex; align-items:center; gap:10px;">
+                <svg style="width:14px;height:14px;stroke:var(--gold);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                <div>
+                  <div style="font-family:'Tenor Sans',sans-serif;font-size:9px;letter-spacing:0.18em;color:var(--gold);text-transform:uppercase;margin-bottom:2px;">Enquiring About</div>
+                  <div id="pkg-inquiry-name" style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:18px;color:var(--white);line-height:1;"></div>
+                </div>
+              </div>
+              <button onclick="clearPackageInquiry()" aria-label="Clear package selection" style="background:none;border:none;cursor:pointer;color:rgba(255,255,255,0.3);font-size:18px;line-height:1;padding:4px;transition:color 0.2s;" onmouseover="this.style.color='var(--white)'" onmouseout="this.style.color='rgba(255,255,255,0.3)'">×</button>
+            </div>
+            <div class="form-field">
+              <input
+                type="text"
+                id="cf-name"
+                placeholder="Your Name"
+                required
+              />
+            </div>
+            <div class="form-field">
+              <input
+                type="email"
+                id="cf-email"
+                placeholder="Your Email"
+                required
+              />
+            </div>
+            <div class="form-field">
+              <textarea
+                id="cf-message"
+                placeholder="Your Message"
+                required
+              ></textarea>
+            </div>
+            <div class="form-status" id="form-status"></div>
+            <button class="btn-send" onclick="handleFormSubmit()">
+              SEND MESSAGE
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div>
+        <div class="footer-logo">TALHA<sup style="font-size: 11px">®</sup></div>
+        <div class="footer-tagline">Creative Design Studio</div>
+      </div>
+      <div>
+        <div class="footer-col-title">Pages</div>
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#packages">Packages</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Socials</div>
+        <ul class="footer-links" id="footer-socials-list"></ul>
+      </div>
+      <div>
+        <div class="footer-cta-text">Let's work together</div>
+        <a
+          class="footer-cta-email"
+          href="mailto:muhammadtalhasaleem786007@gmail.com"
+          id="footer-email"
+          >muhammadtalhasaleem786007@gmail.com</a
+        >
+        <div class="footer-copy" id="footer-copy">© 2025 TALHA® Studio</div>
+        <div style="margin-top: 22px; display: flex; justify-content: flex-end">
+          <div
+            class="scroll-ring-wrap"
+            onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+            title="Back to top"
+          >
+            <svg viewBox="0 0 52 52" fill="none">
+              <circle
+                cx="26"
+                cy="26"
+                r="23"
+                stroke="rgba(201,168,76,0.28)"
+                stroke-width="1"
+                stroke-dasharray="4 5"
+              />
+            </svg>
+            <div class="scroll-ring-dot"></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      /* =====================================================
+   DEFAULT DATA (mirrors admin defaults)
+===================================================== */
+      const DEFAULT = {
+        mode: "published",
+        availability: "available",
+        pdfPath: "",
+        about: {
+          heading: "Designing visual\nsystems that make\nbrands unforgettable.",
+          bio: "I am a graphic designer and creative director with a passion for creating meaningful, elegant and impactful designs.",
+          signatureName: "Talha",
+          profileImage: "",
+          skills: [
+            { name: "Branding & Identity", filled: 4 },
+            { name: "Packaging Design", filled: 4 },
+            { name: "Web Design & UI/UX", filled: 3 },
+            { name: "Social Media Design", filled: 4 },
+            { name: "Typography Design", filled: 4 },
+            { name: "Creative Direction", filled: 3 },
+          ],
+          tools: [
+            { label: "Ps", wide: false },
+            { label: "Ai", wide: false },
+            { label: "Pr", wide: false },
+            { label: "Ae", wide: false },
+            { label: "Xd", wide: false },
+            { label: "Figma", wide: true },
+          ],
+          stats: [
+            { number: "50+", label: "Projects Completed" },
+            { number: "30+", label: "Happy Clients" },
+            { number: "4+", label: "Years Experience" },
+            { number: "10+", label: "Awards Received" },
+          ],
+        },
+        contact: {
+          email: "muhammadtalhasaleem786007@gmail.com",
+          phone: "+92 303 6703995",
+          location: "Pakistan (Remote — Worldwide)",
+          socials: [
+            { label: "Behance", url: "https://www.behance.net/talhasaleem25" },
+            {
+              label: "Instagram",
+              url: "https://www.instagram.com/mtalhasaleem007/",
+            },
+            {
+              label: "LinkedIn",
+              url: "https://www.linkedin.com/in/muhammad-taha-saleem",
+            },
+            {
+              label: "Facebook",
+              url: "https://m.facebook.com/profile.php?id=61560649695063",
+            },
+          ],
+          formspreeEndpoint: "https://formspree.io/f/xaqkpgqa",
+        },
+        projects: [
+          {
+            id: 1,
+            name: "CHOCOFFE",
+            type: "Brand Identity",
+            category: "branding",
+            cardLayout: "grid",
+            status: "published",
+            image: "1779787868422_ChatGPT_Image_May_24__2026__01_34_50_PM.png",
+            gallery: [],
+            imgScale: 1,
+            imgX: 0,
+            imgY: 0,
+          },
+          {
+            id: 2,
+            name: "AURORA",
+            type: "Packaging Design",
+            category: "packaging",
+            cardLayout: "grid",
+            status: "published",
+            image: "",
+            gallery: [],
+            imgScale: 1,
+            imgX: 0,
+            imgY: 0,
+          },
+          {
+            id: 3,
+            name: "NOIR",
+            type: "Poster Design",
+            category: "poster",
+            cardLayout: "grid",
+            status: "published",
+            image: "",
+            gallery: [],
+            imgScale: 1,
+            imgX: 0,
+            imgY: 0,
+          },
+        ],
+        projectLayout: {
+          layout: "grid",
+          cols: 3,
+          gap: 20,
+          radius: 14,
+          ratio: "1 / 1",
+        },
+        packages: {
+          enabled: true,
+          sectionTitle: "Services & Packages",
+          sectionSub:
+            "Professional design packages tailored to your needs and budget.",
+          list: [
+            {
+              name: "Basic",
+              price: "$50",
+              delivery: "2 Days",
+              revisions: "2",
+              sourceFile: true,
+              commercial: false,
+              features: [
+                "Social Media Post Design",
+                "PNG & JPG Delivery",
+                "Brand Color Match",
+                "2 Revisions Included",
+              ],
+              btnText: "Order Basic",
+              btnLink: "#contact",
+              popular: false,
+            },
+            {
+              name: "Standard",
+              price: "$150",
+              delivery: "4 Days",
+              revisions: "4",
+              sourceFile: true,
+              commercial: true,
+              features: [
+                "Logo + Brand Identity",
+                "Business Card Design",
+                "Social Media Kit",
+                "Source Files Included",
+                "Commercial License",
+              ],
+              btnText: "Order Standard",
+              btnLink: "#contact",
+              popular: true,
+            },
+            {
+              name: "Premium",
+              price: "$350",
+              delivery: "7 Days",
+              revisions: "Unlimited",
+              sourceFile: true,
+              commercial: true,
+              features: [
+                "Complete Brand System",
+                "Packaging Design",
+                "Marketing Materials",
+                "Brand Guidelines PDF",
+                "Priority Support",
+                "Commercial License",
+              ],
+              btnText: "Order Premium",
+              btnLink: "#contact",
+              popular: false,
+            },
+          ],
+        },
+      };
+
+      function loadData() {
+        // Priority 1: data baked in at export time (works on GitHub Pages)
+        if (window.__PORTFOLIO_DATA__) {
+          try {
+            return deepMerge(
+              JSON.parse(JSON.stringify(DEFAULT)),
+              JSON.parse(JSON.stringify(window.__PORTFOLIO_DATA__))
+            );
+          } catch(e) {}
+        }
+        // Priority 2: localStorage (works when admin.html is on same machine)
+        try {
+          const r = localStorage.getItem("talha_portfolio_data");
+          if (r)
+            return deepMerge(
+              JSON.parse(JSON.stringify(DEFAULT)),
+              JSON.parse(r),
+            );
+        } catch (e) {}
+        return JSON.parse(JSON.stringify(DEFAULT));
+      }
+      function deepMerge(base, ov) {
+        const r = JSON.parse(JSON.stringify(base));
+        for (const k in ov) {
+          if (
+            ov[k] !== null &&
+            typeof ov[k] === "object" &&
+            !Array.isArray(ov[k])
+          ) {
+            r[k] = deepMerge(r[k] || {}, ov[k]);
+          } else {
+            r[k] = ov[k];
+          }
+        }
+        return r;
+      }
+
+      const D = loadData();
+
+      /* =====================================================
+   RENDER ALL
+===================================================== */
+      function renderAll() {
+        renderAbout();
+        applyLayoutSettings();
+        renderProjects();
+        renderContact();
+        renderAvailability();
+        renderPackages();
+      }
+
+      function renderAbout() {
+        const d = D.about;
+        const he = document.getElementById("about-heading");
+        if (he) he.innerHTML = d.heading.replace(/\n/g, "<br>");
+        const be = document.getElementById("about-bio");
+        if (be) be.innerHTML = d.bio;
+        const se = document.getElementById("about-signature");
+        if (se) se.textContent = d.signatureName;
+        const ie = document.getElementById("about-profile-img");
+        if (ie && d.profileImage) ie.src = d.profileImage;
+        const iem = document.getElementById("about-profile-img-mobile");
+        if (iem && d.profileImage) iem.src = d.profileImage;
+
+        const skc = document.getElementById("skills-list");
+        if (skc)
+          skc.innerHTML = d.skills
+            .map(
+              (s) => `
+    <div class="skill-row">
+      <span class="skill-name">${s.name}</span>
+      <div class="skill-dots">${Array.from({ length: 7 }, (_, i) => `<div class="dot ${i >= 7 - s.filled ? "filled" : ""}"></div>`).join("")}</div>
+    </div>`,
+            )
+            .join("");
+
+        const tg = document.getElementById("tools-grid");
+        if (tg)
+          tg.innerHTML = d.tools
+            .map(
+              (t) =>
+                `<div class="tool-chip${t.wide ? " wide" : ""}">${t.label}</div>`,
+            )
+            .join("");
+
+        const ss = document.getElementById("stats-strip");
+        if (ss)
+          ss.innerHTML = d.stats
+            .map(
+              (s) =>
+                `<div class="stat-cell"><div class="stat-number">${s.number}</div><div class="stat-label">${s.label}</div></div>`,
+            )
+            .join("");
+      }
+
+      function applyLayoutSettings() {
+        const s = D.projectLayout || {};
+        const root = document.documentElement;
+        root.style.setProperty("--proj-cols", s.cols || 3);
+        root.style.setProperty("--proj-gap", (s.gap || 20) + "px");
+        root.style.setProperty("--proj-radius", (s.radius || 14) + "px");
+        root.style.setProperty("--proj-ratio", s.ratio || "1 / 1");
+      }
+
+      function renderProjects() {
+        const grid = document.getElementById("projects-list-dynamic");
+        if (!grid) return;
+        const projects = (D.projects || []).filter(
+          (p) => (p.status || "published") === "published",
+        );
+        if (!projects.length) {
+          grid.innerHTML =
+            '<div style="color:rgba(255,255,255,0.18);font-size:13px;padding:60px 0;text-align:center;grid-column:1/-1;letter-spacing:0.1em;">NO PROJECTS YET</div>';
+          return;
+        }
+        grid.innerHTML = projects.map(buildCard).join("");
+        bindFilters();
+      }
+
+      /* =====================================================
+   BUILD PROJECT CARD
+   Fixed-size container — image transform from admin data
+===================================================== */
+      function buildCard(p) {
+        const isStrip = p.cardLayout === "strip";
+        const scale = p.imgScale || 1;
+        const ix = p.imgX || 0;
+        const iy = p.imgY || 0;
+        const imgTransform = `scale(${scale}) translate(${ix}%,${iy}%)`;
+
+        const thumb = p.image
+          ? `<div class="pc-thumb">
+        <img class="pc-thumb-img" src="${p.image}" alt="${p.name}" loading="lazy"
+          style="transform:${imgTransform};"
+          onerror="this.parentElement.innerHTML='<div class=pc-img-error><svg viewBox=\'0 0 24 24\'><rect x=\'3\' y=\'3\' width=\'18\' height=\'18\' rx=\'2\'/><circle cx=\'8.5\' cy=\'8.5\' r=\'1.5\'/><polyline points=\'21 15 16 10 5 21\'/></svg><span>IMAGE NOT FOUND</span></div>'"/>
+        <div class="pc-overlay"><div class="pc-overlay-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
+      </div>`
+          : `<div class="pc-thumb"><div class="pc-thumb-placeholder" aria-label="No image uploaded"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>NO IMAGE</span></div></div>`;
+        return `<div class="project-card${isStrip ? " card-strip" : ""}" data-id="${p.id}" data-category="${p.category}" onclick="toggleExpand(${p.id},this)" role="button" tabindex="0" aria-label="View ${p.name} project">${thumb}<div class="pc-info"><div class="pc-name">${p.name}</div><div class="pc-type">${p.type}</div></div></div>`;
+      }
+
+      /* =====================================================
+   INLINE EXPAND
+===================================================== */
+      let activeExpandId = null;
+
+      function toggleExpand(pid, cardEl) {
+        if (activeExpandId === pid) {
+          closeExpand();
+          return;
+        }
+        closeExpand(false);
+        activeExpandId = pid;
+        cardEl.classList.add("active-card");
+        const p = (D.projects || []).find((x) => x.id === pid);
+        if (!p) return;
+        const imgs = [];
+        (p.gallery || []).forEach((s) => {
+          imgs.push({ src: s });
+        });
+
+        let gallHTML = "";
+        if (!imgs.length) {
+          gallHTML =
+            '<div class="expand-gallery-empty">NO IMAGES YET — ADD THEM IN THE ADMIN DASHBOARD</div>';
+        } else {
+          gallHTML = `<div class="expand-img-grid">${imgs.map((img, i) => `<div class="expand-img-item" onclick="openLightbox(${JSON.stringify(imgs.map((x) => x.src))},${i})"><img src="${img.src}" alt="${p.name} ${i + 1}" loading="lazy"/></div>`).join("")}</div>`;
+        }
+
+        const panel = document.createElement("div");
+        panel.className = "project-expand";
+        panel.id = "project-expand-panel";
+        panel.dataset.forId = pid;
+        panel.innerHTML = `<div class="expand-header"><div><div class="expand-category">${p.category.toUpperCase()}</div><div class="expand-title">${p.name}</div><div class="expand-subtitle">${p.type}</div></div><button class="expand-close" onclick="event.stopPropagation();closeExpand()">×</button></div><div class="expand-gallery">${gallHTML}</div>`;
+
+        const grid = document.getElementById("projects-list-dynamic");
+        const allCards = [...grid.querySelectorAll(".project-card")];
+        const idx = allCards.indexOf(cardEl);
+        const cols =
+          parseInt(
+            getComputedStyle(document.documentElement)
+              .getPropertyValue("--proj-cols")
+              .trim(),
+          ) || 3;
+        if (cardEl.classList.contains("card-strip")) {
+          cardEl.insertAdjacentElement("afterend", panel);
+        } else {
+          const endIdx = Math.min(
+            Math.ceil((idx + 1) / cols) * cols - 1,
+            allCards.length - 1,
+          );
+          allCards[endIdx].insertAdjacentElement("afterend", panel);
+        }
+        setTimeout(
+          () => panel.scrollIntoView({ behavior: "smooth", block: "nearest" }),
+          60,
+        );
+      }
+
+      function closeExpand(reset = true) {
+        document.getElementById("project-expand-panel")?.remove();
+        document
+          .querySelectorAll(".project-card.active-card")
+          .forEach((c) => c.classList.remove("active-card"));
+        if (reset) activeExpandId = null;
+      }
+
+      /* =====================================================
+   FILTER TABS
+===================================================== */
+      function bindFilters() {
+        const btns = document.querySelectorAll(".filter-tab");
+        btns.forEach((btn) => {
+          btn.onclick = () => {
+            btns.forEach((b) => b.classList.remove("active"));
+            btn.classList.add("active");
+            closeExpand();
+            const f = btn.dataset.filter;
+            document.querySelectorAll(".project-card").forEach((c) => {
+              c.style.display =
+                f === "all" || c.dataset.category === f ? "" : "none";
+            });
+          };
+        });
+      }
+
+      /* =====================================================
+   PACKAGES SECTION
+===================================================== */
+      function renderPackages() {
+        const pkgData = D.packages || {};
+        const sec = document.getElementById("packages");
+        if (!pkgData.enabled) {
+          if (sec) sec.style.display = "none";
+          return;
+        }
+        if (sec) sec.style.display = "";
+
+        const tEl = document.getElementById("pkg-title");
+        const sEl = document.getElementById("pkg-sub");
+        if (tEl)
+          tEl.textContent = pkgData.sectionTitle || "Services & Packages";
+        if (sEl)
+          sEl.textContent =
+            pkgData.sectionSub ||
+            "Professional design packages tailored to your needs.";
+
+        const grid = document.getElementById("packages-grid");
+        if (!grid) return;
+        const list = pkgData.list || [];
+        if (!list.length) {
+          grid.innerHTML = "";
+          return;
+        }
+        grid.innerHTML = list
+          .map((pkg, i) => {
+            const isPopular = pkg.popular;
+            const btnClass = isPopular
+              ? "pkg-btn pkg-btn-solid"
+              : "pkg-btn pkg-btn-outline";
+            const featuresHTML = (pkg.features || [])
+              .map(
+                (f) => `
+      <li class="pkg-feature">
+        <span class="pkg-feature-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+        ${f}
+      </li>`,
+              )
+              .join("");
+            return `
+    <div class="pkg-card${isPopular ? " pkg-popular" : ""}">
+      ${isPopular ? '<div class="pkg-popular-badge">MOST POPULAR</div>' : ""}
+      <div class="pkg-top">
+        <div class="pkg-name">${pkg.name}</div>
+        <div class="pkg-price">${pkg.price}</div>
+        <div class="pkg-price-sub">Starting price</div>
+      </div>
+      <div class="pkg-divider"></div>
+      <div class="pkg-meta">
+        <div class="pkg-meta-row">
+          <span class="pkg-meta-label">Delivery Time</span>
+          <span class="pkg-meta-val gold">${pkg.delivery}</span>
+        </div>
+        <div class="pkg-meta-row">
+          <span class="pkg-meta-label">Revisions</span>
+          <span class="pkg-meta-val">${pkg.revisions}</span>
+        </div>
+        <div class="pkg-meta-row">
+          <span class="pkg-meta-label">Source File</span>
+          <span class="pkg-meta-val">${pkg.sourceFile ? '<span class="check-yes">✓ Included</span>' : '<span class="check-no">✗ Not included</span>'}</span>
+        </div>
+        <div class="pkg-meta-row">
+          <span class="pkg-meta-label">Commercial Use</span>
+          <span class="pkg-meta-val">${pkg.commercial ? '<span class="check-yes">✓ Allowed</span>' : '<span class="check-no">✗ Not included</span>'}</span>
+        </div>
+      </div>
+      <div class="pkg-divider"></div>
+      <ul class="pkg-features">${featuresHTML}</ul>
+      <a href="${pkg.btnLink || "#contact"}" class="${btnClass}" onclick="pkgBtnClick(event,this)">${pkg.btnText || "Order Now"}</a>
+    </div>`;
+          })
+          .join("");
+      }
+
+      /* =====================================================
+          CONTACT
+      ===================================================== */
+      function renderContact() {
+        const d = D.contact;
+        const email = d.email || "";
+        document.querySelectorAll(".dynamic-email").forEach((el) => {
+          el.textContent = email;
+          el.href = "mailto:" + email;
+        });
+        const ce = document.getElementById("ci-email");
+        if (ce) {
+          ce.textContent = email;
+          ce.href = "mailto:" + email;
+        }
+        const pe = document.getElementById("ci-phone");
+        if (pe) {
+          pe.textContent = d.phone || "";
+          pe.href = "tel:" + (d.phone || "").replace(/\s/g, "");
+        }
+        const le = document.getElementById("ci-location");
+        if (le) le.textContent = d.location || "";
+        const fe = document.getElementById("footer-email");
+        if (fe) {
+          fe.textContent = email;
+          fe.href = "mailto:" + email;
+        }
+        const sc = document.getElementById("ci-socials");
+        if (sc && d.socials)
+          sc.innerHTML = d.socials
+            .map(
+              (s, i) =>
+                `<a href="${s.url}" target="_blank" rel="noopener">${s.label}</a>${i < d.socials.length - 1 ? '<span class="sep">/</span>' : ""}`,
+            )
+            .join("");
+        const fs = document.getElementById("footer-socials-list");
+        if (fs && d.socials)
+          fs.innerHTML = d.socials
+            .map(
+              (s) =>
+                `<li><a href="${s.url}" target="_blank" rel="noopener">${s.label}</a></li>`,
+            )
+            .join("");
+      }
+
+      /* =====================================================
+   CONTACT FORM
+===================================================== */
+      async function handleFormSubmit() {
+        const name = document.getElementById("cf-name").value.trim();
+        const email = document.getElementById("cf-email").value.trim();
+        const message = document.getElementById("cf-message").value.trim();
+        const status = document.getElementById("form-status");
+        const btn = document.querySelector(".btn-send");
+        status.className = "form-status";
+        if (!name || !email || !message) {
+          status.className = "form-status error";
+          status.textContent = "Please fill in all fields.";
+          return;
+        }
+        const ep = (D.contact && D.contact.formspreeEndpoint) || "";
+        if (!ep) {
+          status.className = "form-status error";
+          status.textContent = "Contact form not configured yet.";
+          return;
+        }
+        btn.textContent = "SENDING…";
+        btn.disabled = true;
+        try {
+          // Build payload — include package name if one was selected
+          const payload = { name, email, message };
+          if (selectedPackageName) payload.package = selectedPackageName + " Package";
+
+          const r = await fetch(ep, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Accept: "application/json",
+            },
+            body: JSON.stringify(payload),
+          });
+          if (r.ok) {
+            status.className = "form-status success";
+            status.textContent = "Message sent! I'll get back to you soon.";
+            document.getElementById("cf-name").value = "";
+            document.getElementById("cf-email").value = "";
+            document.getElementById("cf-message").value = "";
+            // Clear package inquiry state after successful send
+            clearPackageInquiry();
+          } else {
+            status.className = "form-status error";
+            status.textContent = "Failed to send. Please try again.";
+          }
+        } catch (e) {
+          status.className = "form-status error";
+          status.textContent = "Connection error. Please try again.";
+        }
+        btn.textContent = "SEND MESSAGE";
+        btn.disabled = false;
+      }
+
+      /* =====================================================
+   AVAILABILITY BADGE
+===================================================== */
+      function renderAvailability() {
+        const wrap = document.getElementById("avail-badge-wrap");
+        if (!wrap) return;
+        const av = D.availability || "available";
+        const labels = {
+          available: "Available for Work",
+          limited: "Limited Availability",
+          booked: "Currently Booked",
+        };
+        wrap.innerHTML = `<div class="avail-badge ${av}"><div class="avail-dot"></div>${labels[av] || "Available"}</div>`;
+        const pdfBtn = document.getElementById("pdf-download-btn");
+        if (pdfBtn) {
+          if (D.pdfPath) {
+            pdfBtn.href = D.pdfPath;
+            pdfBtn.style.display = "inline-flex";
+          } else pdfBtn.style.display = "none";
+        }
+      }
+
+      /* =====================================================
+   PREMIUM NAVBAR — Transparent → Solid+Blur on scroll
+===================================================== */
+      (function initNavScroll() {
+        const nav = document.getElementById("navbar");
+        let ticking = false;
+        function onScroll() {
+          if (!ticking) {
+            requestAnimationFrame(() => {
+              if (window.scrollY > 60) {
+                nav.classList.add("nav-scrolled");
+              } else {
+                nav.classList.remove("nav-scrolled");
+              }
+              ticking = false;
+            });
+            ticking = true;
+          }
+        }
+        window.addEventListener("scroll", onScroll, { passive: true });
+        onScroll(); // Check on load
+      })();
+
+      /* =====================================================
+   NAV ACTIVE STATE on scroll
+===================================================== */
+      (function initNavActive() {
+        const sections = document.querySelectorAll("section[id]");
+        const links = document.querySelectorAll(".nav-links a[data-section]");
+        let ticking = false;
+        function onScroll() {
+          if (!ticking) {
+            requestAnimationFrame(() => {
+              let current = "";
+              sections.forEach((sec) => {
+                if (window.scrollY >= sec.offsetTop - 120) current = sec.id;
+              });
+              links.forEach((a) => {
+                a.classList.toggle("active", a.dataset.section === current);
+              });
+              ticking = false;
+            });
+            ticking = true;
+          }
+        }
+        window.addEventListener("scroll", onScroll, { passive: true });
+      })();
+
+      /* =====================================================
+   MOBILE NAV
+===================================================== */
+      function toggleNavMenu() {
+        document.getElementById("nav-links").classList.toggle("mobile-open");
+        document.getElementById("nav-overlay").classList.toggle("open");
+      }
+      function closeNavMenu() {
+        document.getElementById("nav-links").classList.remove("mobile-open");
+        document.getElementById("nav-overlay").classList.remove("open");
+      }
+
+      /* =====================================================
+   PACKAGE BUTTON — scroll to #contact and pre-fill message
+===================================================== */
+      let selectedPackageName = "";
+
+      function pkgBtnClick(e, el) {
+        e.preventDefault();
+        const raw = (el.getAttribute("href") || "").trim();
+        const href = raw || "#contact";
+
+        // Read package name from the card's .pkg-name element
+        const card = el.closest(".pkg-card");
+        const pkgNameEl = card ? card.querySelector(".pkg-name") : null;
+        const pkgName = pkgNameEl ? pkgNameEl.textContent.trim() : "";
+        const pkgPrice = card ? (card.querySelector(".pkg-price") ? card.querySelector(".pkg-price").textContent.trim() : "") : "";
+
+        if (href.startsWith("#")) {
+          const target = document.getElementById(href.slice(1));
+          if (!target) return;
+
+          // Pre-fill the message textarea with the package inquiry
+          if (pkgName) {
+            selectedPackageName = pkgName;
+            const msgEl = document.getElementById("cf-message");
+            if (msgEl && !msgEl.value) {
+              msgEl.value = `Hi, I'm interested in the ${pkgName} Package${pkgPrice ? " (" + pkgPrice + ")" : ""}. I'd like to discuss my project requirements and get started.\n\nPlease let me know the next steps.`;
+            }
+            // Show the inquiry banner
+            const banner = document.getElementById("pkg-inquiry-banner");
+            const bannerName = document.getElementById("pkg-inquiry-name");
+            if (banner && bannerName) {
+              bannerName.textContent = pkgName + " Package";
+              banner.style.display = "flex";
+            }
+          }
+
+          const navEl = document.querySelector("nav");
+          const offset = navEl ? navEl.offsetHeight + 12 : 80;
+          const y = target.getBoundingClientRect().top + window.pageYOffset - offset;
+          window.scrollTo({ top: y, behavior: "smooth" });
+          window.history.replaceState(null, null, href);
+
+          // Focus the name field after scroll
+          setTimeout(() => {
+            const nameEl = document.getElementById("cf-name");
+            if (nameEl && !nameEl.value) nameEl.focus();
+          }, 680);
+        }
+        return false;
+      }
+
+      function clearPackageInquiry() {
+        selectedPackageName = "";
+        const banner = document.getElementById("pkg-inquiry-banner");
+        if (banner) banner.style.display = "none";
+        const msgEl = document.getElementById("cf-message");
+        if (msgEl) msgEl.value = "";
+      }
+
+      /* =====================================================
+   LIGHTBOX — fullscreen image viewer with navigation
+===================================================== */
+      let lbImages = [];
+      let lbIndex = 0;
+
+      function openLightbox(srcs, idx) {
+        lbImages = srcs;
+        lbIndex = idx;
+        renderLightbox();
+      }
+
+      function renderLightbox() {
+        document.getElementById("lb-overlay")?.remove();
+        const overlay = document.createElement("div");
+        overlay.id = "lb-overlay";
+        overlay.className = "lb-overlay";
+        overlay.innerHTML = `
+    <button class="lb-close" onclick="closeLightbox()" aria-label="Close">×</button>
+    ${lbImages.length > 1 ? `<button class="lb-nav-btn lb-prev" onclick="lbNav(-1)" aria-label="Previous">‹</button>` : ""}
+    <div class="lb-inner">
+      <img class="lb-img" id="lb-img" src="${lbImages[lbIndex]}" alt="Gallery image ${lbIndex + 1}" draggable="false"/>
+      ${lbImages.length > 1 ? `<div class="lb-counter">${lbIndex + 1} / ${lbImages.length}</div>` : ""}
+    </div>
+    ${lbImages.length > 1 ? `<button class="lb-nav-btn lb-next" onclick="lbNav(1)" aria-label="Next">›</button>` : ""}
+  `;
+        // Click outside to close
+        overlay.addEventListener("click", function (e) {
+          if (e.target === overlay) closeLightbox();
+        });
+        document.body.appendChild(overlay);
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeLightbox() {
+        document.getElementById("lb-overlay")?.remove();
+        document.body.style.overflow = "";
+      }
+
+      function lbNav(dir) {
+        lbIndex = (lbIndex + dir + lbImages.length) % lbImages.length;
+        renderLightbox();
+      }
+
+      // Keyboard navigation for lightbox
+      document.addEventListener("keydown", function (e) {
+        if (!document.getElementById("lb-overlay")) return;
+        if (e.key === "ArrowRight" || e.key === "ArrowDown") lbNav(1);
+        else if (e.key === "ArrowLeft" || e.key === "ArrowUp") lbNav(-1);
+        else if (e.key === "Escape") closeLightbox();
+      });
+
+      /* =====================================================
+   INIT
+===================================================== */
+      renderAll();
+    </script>
+  </body>
+</html>
